@@ -11,9 +11,20 @@ $(document).ready(function () {
       offset: "60px",
     }
   );
-  // var waypoints = $('#handler-first').waypoint(function(direction) {
-  //     notify(this.element.id + ' hit 25% from top of window')
-  // }, {
-  //     offset: 25%
-  // })
+});
+
+// MOBILE NAVIGATION
+$(".js--nav-icon").click(function() {
+  var nav = $('.js--main-nav');
+  var icon = $('.js--nav-icon i');
+
+  nav.slideToggle(200);
+
+  if (icon.hasClass('fa-bars')) {
+    icon.addClass("fa-times");
+    icon.removeClass("fa-bars");
+  } else {
+    icon.addClass("fa-bars");
+    icon.removeClass("fa-times");
+  }
 });
